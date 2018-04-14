@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<% include partials/header %>
+    <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+
+    <body>
+
+        <div id="main" style="display: block;font-family: 'Source Sans Pro';font-size: 1.3em;position: absolute;width: 100%;height: 100%;top: 50%;left: 50%;margin: -28%;padding: 20px;z-index: 999;max-width: 1020px !important;width: 100%;margin-top: -25%;">
+            <h1 class="text-uppercase mb-0" style="padding-bottom: 25px;">Send Mail </h1>
+            <div id="mail">
+                <div class="row">
+                    <div class="col-12"> <textarea class="form-control" id="textEmail" rows="5" placeholder="Copier le code CSS / HTML directement ici"></textarea></div>
+                </div>
+                <div class="row" style="padding-top: 10px">
+                    <div> </div>
+                    <div class="col-5">
+                        <p>Titre du mail :</p>
+                    </div>
+                    <div class="col-5"> <input class="form-control" placeholder="Defaut : E-Mail de Test" style="margin-bottom: 25px; text-align: center" id="titleEmail" type="text"> </div>
+                </div>
+                <div class="row" style="padding-top: 10px">
+                    <div class="col-5">
+                        <p>Email du destinataire :</p>
+                    </div>
+                    <div class="col-5"> <input class="form-control" placeholder="Email du destinataire" style="text-align: center" id="recipientEmail" name="email" value="" required="" autofocus="" type="email"> </div>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 10px">
+                <div class="col-12"><button type="button" class="btn btn-dark btn-lg btn-block" id="send" onclick="send();" style="font-family: 'Russo One', sans-serif;background: #f7dc1b;color: black;border: 2px solid aliceblue;">Envoyer</button> </div>
+            </div>
+
+
+        </div>
+        <div class="alert alert-success" id="MailOk" role="alert" style='display: flex !important; align-items: center !important; margin: 0px !important; background: #fff0; position: absolute !important; top: 50% !important; left: 50% !important; transform: translate(-50%, -50%) !important; height: 10em !important; font-family: "Press Start 2P", cursive; font-size: 18px;border: none;visibility: hidden;'>
+
+            <p style="color:white;">Votre message a été envoyé avec succès.</p><br>
+            <button class="btn btn-danger" id="reload" onclick="reload();">Nouvelle E-Mail</button>
+
+        </div>
+
+
+
+        <div id="particles-js" style="/*! background-color: rgb(182, 25, 36); */ background-image: url(&quot;&quot;); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%;"><canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1903" height="952"></canvas></div>
+
+        <script src="js/particles.js"></script>
+        <script src="js/app.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="/js/send.js"></script>
+
+
+    </body>
+
+</html>
